@@ -41,11 +41,6 @@ bno.enable_feature(adafruit_bno08x.BNO_REPORT_STABILITY_CLASSIFIER)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_ACTIVITY_CLASSIFIER)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_SHAKE_DETECTOR)
 
-bno.enable_feature(adafruit_bno08x.BNO_REPORT_ACCELEROMETER)
-
-
-
-
 def normalize(value, min_val, max_val):
     if max_val == min_val:
         return 0  # Return 0 if there's no range
