@@ -42,6 +42,6 @@ while True:
     print(
         "I: %0.6f  J: %0.6f K: %0.6f  Real: %0.6f" % (quat_i, quat_j, quat_k, quat_real)
     )
-    print("wo")
+
 
 
