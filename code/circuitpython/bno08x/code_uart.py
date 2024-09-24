@@ -1,11 +1,10 @@
-import time
-import adafruit_bno08x
-from adafruit_bno08x.uart import BNO08X_UART
+import time, os, wifi, socketpool
 import board  # pylint:disable=wrong-import-order
 import busio  # pylint:disable=wrong-import-order
 
-import socketpool
-import wifi
+import adafruit_bno08x
+from adafruit_bno08x.uart import BNO08X_UART
+
 import microosc
 
 # Set up UART for the BNO085 sensor
@@ -15,24 +14,24 @@ bno = BNO08X_UART(uart)
 "-----------------------------------------------------------"
 # WiFi and OSC setup
 # Wi-Fi configuration
-WIFI_SSID = "FRITZ!Box 7590 YP"
-WIFI_PASSWORD = "38677576027060286734"
+ssid = os.getenv("CIRCUITPY_WIFI_SSID")
+password = os.getenv("CIRCUITPY_WIFI_PASSWORD")
+UDP_HOST = os.getenv("CIRCUITPY_HOST_IP")
+UDP_PORT = 8000
 
 # Connect to Wi-Fi
-print("Connecting to WiFi...")
-wifi.radio.connect(WIFI_SSID, WIFI_PASSWORD)
+print("Connecting to WiFi", ssid)
+wifi.radio.connect(ssid, password)
 print("Connected to WiFi")
 
 # Setup UDP socket
 socket_pool = socketpool.SocketPool(wifi.radio)
-UDP_IP = "192.168.178.28"  # Replace with the receiver's IP address
-UDP_PORT = 8000  # The port you want to send to
 
 # Create an OSC client
-osc = microosc.OSCClient(socket_pool, UDP_IP, UDP_PORT)
+osc = microosc.OSCClient(socket_pool, UDP_HOST, UDP_PORT)
 
 "-----------------------------------------------------------"
-# Enable desired sensor data
+# Enable sensor data
 
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_GYROSCOPE)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_LINEAR_ACCELERATION)
@@ -42,55 +41,49 @@ bno.enable_feature(adafruit_bno08x.BNO_REPORT_STABILITY_CLASSIFIER)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_ACTIVITY_CLASSIFIER)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_SHAKE_DETECTOR)
 
+bno.enable_feature(adafruit_bno08x.BNO_REPORT_ACCELEROMETER)
 
 
-min_gyro_x, max_gyro_x = float('inf'), float('-inf')
-min_gyro_y, max_gyro_y = float('inf'), float('-inf')
-min_gyro_z, max_gyro_z = float('inf'), float('-inf')
+
 
 def normalize(value, min_val, max_val):
     if max_val == min_val:
-        return 0
-    return 2 * (value - min_val) / (max_val - min_val) - 1
+        return 0  # Return 0 if there's no range
+    return 2 * ((value - min_val) / (max_val - min_val)) - 1
+
+
+
 
 while True:
+
+    time.sleep(0.0025)
+
+    quat_i, quat_j, quat_k, quat_real = bno.game_quaternion  # pylint:disable=no-member
+
     gyro_x, gyro_y, gyro_z = bno.gyro
-
-    min_gyro_x = min(min_gyro_x, gyro_x)
-    max_gyro_x = max(max_gyro_x, gyro_x)
-
-    min_gyro_y = min(min_gyro_y, gyro_y)
-    max_gyro_y = max(max_gyro_y, gyro_y)
-
-    min_gyro_z = min(min_gyro_z, gyro_z)
-    max_gyro_z = max(max_gyro_z, gyro_z)
-
-    norm_gyro_x = normalize(gyro_x, min_gyro_x, max_gyro_x)
-    norm_gyro_y = normalize(gyro_y, min_gyro_y, max_gyro_y)
-    norm_gyro_z = normalize(gyro_z, min_gyro_z, max_gyro_z)
-
-    print((norm_gyro_x, norm_gyro_y, norm_gyro_z))
-
-    time.sleep(0.05)
+    # Define dynamic upper and lower limits
+    lower_limit = min(gyro_x, gyro_y, gyro_z)
+    upper_limit = max(gyro_x, gyro_y, gyro_z)
 
 
+    # Normalize and round gyroscope data
+    gyro_x_norm = round(normalize(gyro_x, lower_limit, upper_limit), 4)
+    gyro_y_norm = round(normalize(gyro_y, lower_limit, upper_limit), 4)
+    gyro_z_norm = round(normalize(gyro_z, lower_limit, upper_limit), 4)
 
+    # Create OSC message
+    gyro_data = microosc.OscMsg("/gyroscope", [gyro_x_norm, gyro_y_norm, gyro_z_norm, 0], ("f", "f", "f", "i",))  # fmt: skip
+    osc.send(gyro_data)
 
 
 
 # quat values modified for correct visualisation in Max/MSP: k and j switched, j multiplied by -1
-    quat_i, quat_j, quat_k, quat_real = bno.game_quaternion  # pylint:disable=no-member
-    activity_classification = bno.activity_classification
-    most_likely = activity_classification["most_likely"]
-    #print(most_likely, activity_classification[most_likely]/100)
-    #print(bno.stability_classification)
-    #print(bno.steps)
 
-    game_quat = microosc.OscMsg("/quaternion",
-    [quat_i, quat_k, quat_j*-1, quat_real,], ("f", "f", "f", "f",))  # fmt: skip
-    osc.send(game_quat)
+    game_quat = microosc.OscMsg("/1/quaternion",
+#    [quat_i, quat_k, quat_j*-1, quat_real,], ("f", "f", "f", "f",))  # fmt: skip
+    [quat_i, quat_j, quat_k, quat_real,], ("f", "f", "f", "f",))
+#    osc.send(game_quat)
 
-    # print((quat_i, quat_j, quat_k, quat_real))
 
 
 
