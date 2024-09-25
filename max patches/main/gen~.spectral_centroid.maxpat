@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 181.0, 92.0, 150.0, 35.0 ],
+					"text" : "spectral centroid calculation with gen~"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Lato",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
@@ -71,7 +83,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 34.0, 34.0, 656.0, 566.0 ],
+						"rect" : [ 34.0, 87.0, 1190.0, 779.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -101,7 +113,7 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"code" : "History last(0.);\r\nHistory sum_energy(0.);\r\nHistory sum_energy_index(0.);\r\n\r\nreal = in1;\r\nimag = in2;\r\nindex = in3;\r\nenergy = real * real + imag * imag;\t// you could sqrt that if you want to take the amplitude...\r\nval = last;\t// the value we send out\r\n\r\nif (index < (VECTORSIZE-1)) {\r\n\t// accumulate while the index is below (vectorsize - 1)\r\n\tsum_energy += energy;\r\n\tsum_energy_index += energy * index;\r\n} else {\r\n\t// we now have a full frame; recalculate val:\r\n\tval = (sum_energy_index / sum_energy);\r\n\tval *= SAMPLERATE / FFTSIZE;\r\n\tval *= FFTHOP / VECTORSIZE;\r\n\t\r\n\tsum_energy = 0.;\r\n\tsum_energy_index = 0.;\r\n\t\r\n\t// store new centroid for next sample\r\n\tlast = val;\r\n}\r\n\r\nout = val;",
+									"code" : "History last(0.);\r\nHistory sum_energy(0.);\r\nHistory sum_energy_index(0.);\r\n\r\nreal = in1;\r\nimag = in2;\r\nindex = in3;\r\nenergy = real * real + imag * imag;\t// sqrt it for amplitude\r\nval = last;\t// the value we send out\r\n\r\nif (index < (VECTORSIZE-1)) {\r\n\t// accumulate while the index is below (vectorsize - 1)\r\n\tsum_energy += energy;\r\n\tsum_energy_index += energy * index;\r\n} else {\r\n\t// we now have a full frame; recalculate val:\r\n\tval = (sum_energy_index / sum_energy);\r\n\tval *= SAMPLERATE / FFTSIZE;\r\n\tval *= FFTHOP / VECTORSIZE;\r\n\t\r\n\tsum_energy = 0.;\r\n\tsum_energy_index = 0.;\r\n\t\r\n\t// store new centroid for next sample\r\n\tlast = val;\r\n}\r\n\r\nout = val;",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -251,7 +263,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }

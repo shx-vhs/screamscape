@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1510.0, 959.0 ],
+		"rect" : [ 34.0, 87.0, 1190.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 660.0, 930.0, 150.0, 47.0 ],
+					"text" : "if you do not have this device connect the out of gen~ to the send"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bubble" : 1,
 					"fontsize" : 10.0,
 					"id" : "obj-17",
@@ -48,7 +60,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 940.0, 790.0, 178.0, 55.0 ],
-					"presentation_linecount" : 4,
 					"text" : "Although insufficient, this is a quick solution for gaining access to low, mid and high frequency band amplitude. "
 				}
 
@@ -294,7 +305,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 162.0, 811.0, 300.0, 100.0 ]
+					"patching_rect" : [ 50.0, 800.0, 300.0, 100.0 ]
 				}
 
 			}
@@ -2661,62 +2672,62 @@
 		"dependency_cache" : [ 			{
 				"name" : "AudioM4LEffect.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioMix.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioOutput.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioReceive2.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioRecord.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioSend2.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioVSTEffect.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioXfaderIn.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Kelly-Lochbaum.gendsp",
-				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max/main",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main/archive",
 				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
@@ -2730,13 +2741,13 @@
 , 			{
 				"name" : "Max DelayMultiBand.amxd.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Ri.gendsp",
-				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max/main",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main/archive",
 				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
@@ -2744,13 +2755,13 @@
 , 			{
 				"name" : "SimpleGain.amxd",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/misc",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/AudioMix/misc",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/AudioMix/misc",
 				"type" : "amxd",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Vocal_Tract.gendsp",
-				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max/main",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main/archive",
 				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
@@ -2774,21 +2785,21 @@
 , 			{
 				"name" : "mousepos.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/vocal.node/patchers",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/vocal.node/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/vocal.node/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "node_v1.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "node_v1[1].maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
@@ -2806,7 +2817,7 @@
 			}
 , 			{
 				"name" : "scattering_junction.gendsp",
-				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max/main",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main/archive",
 				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
@@ -2834,13 +2845,13 @@
 , 			{
 				"name" : "sw.maxpat",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 8/Examples/max-tricks/send-receive-tricks/lib",
-				"patcherrelativepath" : "../../../../../../../Library/Application Support/Cycling '74/Max 8/Examples/max-tricks/send-receive-tricks/lib",
+				"patcherrelativepath" : "../../../../../../../../Library/Application Support/Cycling '74/Max 8/Examples/max-tricks/send-receive-tricks/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vocal_dsp.maxpat",
-				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max/main",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main/archive",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
