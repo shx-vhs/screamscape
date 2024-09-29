@@ -1,0 +1,57 @@
+{
+	"pattrstorage" : 	{
+		"name" : "vocal-node",
+		"slots" : 		{
+			"22" : 			{
+				"id" : 22,
+				"data" : 				{
+					"AudioSend2::active" : [ 1.0 ],
+					"AudioSend2::bus" : [ "Dry" ],
+					"AudioSend2::gain" : [ 0.0 ],
+					"AudioReceive2[1]::active" : [ 1.0 ],
+					"AudioReceive2[1]::bus" : [ "Wet" ],
+					"AudioReceive2[1]::gain" : [ 0.0 ],
+					"AudioMix[2]::active" : [ 1.0 ],
+					"AudioMix[2]::gain" : [ 0.0 ],
+					"AudioMix[2]::pan" : [ 0.0 ],
+					"AudioMix[2]::solo" : [ 0.0 ],
+					"AudioXfaderIn::A" : [ 0.0 ],
+					"AudioXfaderIn::B" : [ 0.0 ],
+					"AudioXfaderIn::fade" : [ 50.0 ],
+					"AudioOutput[1]::output" : [ 1.0 ],
+					"AudioRecord[1]::file" : [ 0.0 ],
+					"AudioRecord[1]::gain" : [ 0.0 ],
+					"AudioRecord[1]::rec" : [ 0.0 ],
+					"AudioReceive2[2]::active" : [ 1.0 ],
+					"AudioReceive2[2]::bus" : [ "Spectral" ],
+					"AudioReceive2[2]::gain" : [ 0.0 ],
+					"AudioSend2[1]::active" : [ 1.0 ],
+					"AudioSend2[1]::bus" : [ "Spectral" ],
+					"AudioSend2[1]::gain" : [ 0.0 ],
+					"AudioReceive2[3]::active" : [ 1.0 ],
+					"AudioReceive2[3]::bus" : [ "Wet" ],
+					"AudioReceive2[3]::gain" : [ 0.0 ],
+					"AudioReceive2[4]::active" : [ 1.0 ],
+					"AudioReceive2[4]::bus" : [ "Dry" ],
+					"AudioReceive2[4]::gain" : [ 0.0 ],
+					"AudioSend2[2]::active" : [ 1.0 ],
+					"AudioSend2[2]::bus" : [ "Wet" ],
+					"AudioSend2[2]::gain" : [ 0.0 ],
+					"osc.viz::mo.calibrate::calibrate" : [ 0.0 ],
+					"osc.viz::mo.calibrate::min" : [ 0.0 ],
+					"osc.viz::mo.calibrate::max" : [ 1.0 ],
+					"osc.viz::mo.calibrate::polarity" : [ 0.0 ],
+					"osc.viz::mo.calibrate::invert" : [ 0.0 ],
+					"osc.viz::mo.calibrate::mute" : [ 0.0 ],
+					"AudioReceive2[5]::active" : [ 1.0 ],
+					"AudioReceive2[5]::bus" : [ "Wet" ],
+					"AudioReceive2[5]::gain" : [ 0.0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

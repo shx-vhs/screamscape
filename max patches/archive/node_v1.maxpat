@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 8,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -220,7 +220,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 190.0, 540.0, 40.0, 22.0 ],
+					"patching_rect" : [ 170.0, 470.0, 40.0, 22.0 ],
 					"text" : "*~ 0.4"
 				}
 
@@ -256,7 +256,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 270.0, 590.0, 44.0, 21.0 ],
+					"patching_rect" : [ 490.0, 610.0, 44.0, 21.0 ],
 					"text" : "Glottis"
 				}
 
@@ -269,7 +269,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 960.0, 620.0, 44.0, 21.0 ],
+					"patching_rect" : [ 1180.0, 640.0, 44.0, 21.0 ],
 					"text" : "Mouth"
 				}
 
@@ -293,7 +293,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 669.143360865924933, 533.981828051570915, 100.0, 21.0 ],
+					"patching_rect" : [ 889.143360865924933, 553.981828051570915, 100.0, 21.0 ],
 					"text" : "Vocal tract Shape"
 				}
 
@@ -323,7 +323,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -437,7 +437,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1195,7 +1195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 312.643360865924819, 529.981828051570915, 53.0, 22.0 ],
+					"patching_rect" : [ 532.643360865924819, 549.981828051570915, 53.0, 22.0 ],
 					"text" : "sw area"
 				}
 
@@ -1209,7 +1209,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 320.0, 570.0, 629.0, 124.0 ],
+					"patching_rect" : [ 540.0, 590.0, 629.0, 124.0 ],
 					"setminmax" : [ 1.0, 10.0 ],
 					"setstyle" : 1,
 					"size" : 22,
@@ -1279,7 +1279,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1520,7 +1520,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 40.0, 470.0, 24.0, 24.0 ]
+					"patching_rect" : [ 40.0, 440.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1531,7 +1531,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 40.0, 540.0, 39.0, 22.0 ],
+					"patching_rect" : [ 40.0, 510.0, 39.0, 22.0 ],
 					"text" : "gate~"
 				}
 
@@ -1568,7 +1568,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 220.0, 440.0, 192.0, 66.0 ],
+					"patching_rect" : [ 220.0, 410.0, 192.0, 66.0 ],
 					"text" : "Very basic noise injection via envelope follower. Noise magnitude spectrum should roughly follow voice input magnitude which is a task to solve. "
 				}
 
@@ -1581,7 +1581,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 170.0, 470.0, 27.0, 20.0 ],
+					"patching_rect" : [ 170.0, 440.0, 27.0, 20.0 ],
 					"text" : "*~"
 				}
 
@@ -1594,7 +1594,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 170.0, 430.0, 33.0, 20.0 ],
+					"patching_rect" : [ 170.0, 400.0, 33.0, 20.0 ],
 					"text" : "pink~"
 				}
 
@@ -1813,7 +1813,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 8,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2292,7 +2292,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
-					"midpoints" : [ 329.5, 697.981828051570915, 299.143360865924819, 697.981828051570915, 299.143360865924819, 519.981828051570915, 322.143360865924819, 519.981828051570915 ],
+					"midpoints" : [ 549.5, 717.981828051570915, 519.143360865924819, 717.981828051570915, 519.143360865924819, 539.981828051570915, 542.143360865924819, 539.981828051570915 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -2391,7 +2391,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-96", 0 ],
-					"midpoints" : [ 196.607135832309723, 537.142853260040283 ],
+					"midpoints" : [ 196.607135832309723, 507.142853260040283 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
