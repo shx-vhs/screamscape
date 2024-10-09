@@ -45,7 +45,10 @@
 					"osc.viz::mo.calibrate::mute" : [ 0.0 ],
 					"AudioReceive2[5]::active" : [ 1.0 ],
 					"AudioReceive2[5]::bus" : [ "Wet" ],
-					"AudioReceive2[5]::gain" : [ 0.0 ]
+					"AudioReceive2[5]::gain" : [ 0.0 ],
+					"AudioReceive2[6]::active" : [ 1.0 ],
+					"AudioReceive2[6]::bus" : [ "Spectral" ],
+					"AudioReceive2[6]::gain" : [ 0.0 ]
 				}
 
 			}

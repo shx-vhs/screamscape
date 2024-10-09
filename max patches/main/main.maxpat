@@ -40,6 +40,66 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-54",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "mo.cpu.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 211.728709936141968, 401.0, 70.0, 45.0 ],
+					"varname" : "mo.latch",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "threshold",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-114",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 203.833938479423523, 1207.855241894721985, 150.0, 23.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "A remote stereo audio  receiver.",
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-56",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "AudioReceive2.maxpat",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 157.833938479423523, 1478.855241894721985, 69.0, 39.0 ],
+					"varname" : "AudioReceive2[6]",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "preset",
 					"numinlets" : 1,
@@ -1601,7 +1661,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 1454.390242099761963, 302.195119857788086, 603.0, 344.0 ],
-					"pic" : "Screen Shot 2024-09-26 at 17.43.12.png"
+					"pic" : "eve_filters.png"
 				}
 
 			}
@@ -1613,7 +1673,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 1704.390242099761963, 32.195119857788086, 353.0, 253.0 ],
-					"pic" : "Screen Shot 2024-09-26 at 17.43.18.png"
+					"pic" : "eve_model.png"
 				}
 
 			}
@@ -1776,7 +1836,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "", "" ],
+					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 103.728709936141968, 862.668615698814392, 69.0, 39.0 ],
 					"varname" : "AudioSend2[1]",
 					"viewvisibility" : 1
@@ -1994,7 +2054,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 30.0, 47.0, 223.0, 97.0 ],
+					"patching_rect" : [ 30.0, 40.609760284423828, 223.0, 97.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -3435,7 +3495,16 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-69", 1 ],
+					"order" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-69", 0 ],
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -3445,6 +3514,13 @@
 					"destination" : [ "obj-134", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-110", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"source" : [ "obj-114", 0 ]
 				}
 
 			}
@@ -3834,6 +3910,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-24", 1 ],
+					"source" : [ "obj-56", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-120", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-57", 0 ]
@@ -4018,6 +4108,12 @@
 			"obj-153::obj-21::obj-18" : [ "live.text[37]", "live.text", 0 ],
 			"obj-153::obj-21::obj-37" : [ "live.text[35]", "live.text", 0 ],
 			"obj-153::obj-21::obj-8" : [ "live.numbox[91]", "live.numbox", 0 ],
+			"obj-153::obj-2::obj-21" : [ "live.text[319]", "live.text", 0 ],
+			"obj-153::obj-2::obj-4" : [ "live.text[318]", "live.text", 0 ],
+			"obj-153::obj-2::obj-52" : [ "live.numbox[352]", "live.numbox", 0 ],
+			"obj-153::obj-30::obj-74" : [ "live.text[432]", "live.text", 0 ],
+			"obj-153::obj-30::obj-9" : [ "live.text[433]", "live.text", 0 ],
+			"obj-153::obj-9::obj-6" : [ "live.text[616]", "live.text", 0 ],
 			"obj-24::obj-122" : [ "active[7]", "Active", 0 ],
 			"obj-24::obj-35" : [ "bus[6]", "Bus", 0 ],
 			"obj-24::obj-88" : [ "gain[8]", "Gain", 0 ],
@@ -4026,9 +4122,13 @@
 			"obj-29::obj-88" : [ "gain[4]", "Gain", 0 ],
 			"obj-49::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ],
 			"obj-49::obj-35" : [ "[5]", "Level", 0 ],
+			"obj-54::obj-9" : [ "live.text[296]", "live.text", 0 ],
 			"obj-55::obj-122" : [ "active[1]", "Active", 0 ],
 			"obj-55::obj-35" : [ "bus[1]", "Bus", 0 ],
 			"obj-55::obj-88" : [ "gain[1]", "Gain", 0 ],
+			"obj-56::obj-122" : [ "active[9]", "Active", 0 ],
+			"obj-56::obj-35" : [ "bus[8]", "Bus", 0 ],
+			"obj-56::obj-88" : [ "gain[10]", "Gain", 0 ],
 			"obj-58::obj-24" : [ "output", "Output", 0 ],
 			"obj-59::obj-122" : [ "rec", "Rec", 0 ],
 			"obj-59::obj-24" : [ "file", "File", 0 ],
@@ -4094,6 +4194,14 @@
 ,
 				"obj-55::obj-88" : 				{
 					"parameter_longname" : "gain[1]"
+				}
+,
+				"obj-56::obj-122" : 				{
+					"parameter_longname" : "active[9]"
+				}
+,
+				"obj-56::obj-88" : 				{
+					"parameter_longname" : "gain[10]"
 				}
 ,
 				"obj-59::obj-88" : 				{
@@ -4193,9 +4301,37 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "eve_filters.png",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main",
+				"patcherrelativepath" : ".",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "eve_model.png",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/vocal-node/max patches/main",
+				"patcherrelativepath" : ".",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "interfacecolor.js",
 				"bootpath" : "C74:/interfaces",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mo.cpu.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/modulo/patchers/utility",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/modulo/patchers/utility",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mo.latch.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/modulo/patchers/transform",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/modulo/patchers/transform",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -4206,10 +4342,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "mo.monitor.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/modulo/patchers/utility",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/modulo/patchers/utility",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "mo.resize.js",
 				"bootpath" : "~/Documents/Max 8/Packages/modulo/misc/js",
 				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/modulo/misc/js",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mo.udpreceive.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/modulo/patchers/route",
+				"patcherrelativepath" : "../../../../../../../Documents/Max 8/Packages/modulo/patchers/route",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
