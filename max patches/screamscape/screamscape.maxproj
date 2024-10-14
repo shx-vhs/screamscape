@@ -2,7 +2,7 @@
 	"name" : "screamscape",
 	"version" : 1,
 	"creationdate" : 3603215591,
-	"modificationdate" : 3811416461,
+	"modificationdate" : 3811776117,
 	"viewrect" : [ 25.0, 87.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -15,6 +15,10 @@
 				"local" : 1,
 				"toplevel" : 1
 			}
+
+		}
+,
+		"code" : 		{
 
 		}
 ,
@@ -40,7 +44,7 @@
 
 	}
 ,
-	"detailsvisible" : 1,
+	"detailsvisible" : 0,
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
