@@ -1,0 +1,43 @@
+{
+	"parameter_map" : 	{
+		"midi" : 		{
+			"live.gain~" : 			{
+				"srcname" : "114.ctrl.0.chan.midi",
+				"min" : -70.0,
+				"max" : 6.0,
+				"flags" : 2
+			}
+,
+			"IN GAIN" : 			{
+				"srcname" : "10.ctrl.0.chan.midi",
+				"min" : -70.0,
+				"max" : 6.0,
+				"flags" : 2
+			}
+,
+			"dir vol" : 			{
+				"srcname" : "74.ctrl.0.chan.midi",
+				"min" : -70.0,
+				"max" : 6.0,
+				"flags" : 2
+			}
+,
+			"mod vol" : 			{
+				"srcname" : "71.ctrl.0.chan.midi",
+				"min" : -70.0,
+				"max" : 6.0,
+				"flags" : 2
+			}
+,
+			"textbutton" : 			{
+				"srcname" : "44.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+
+		}
+
+	}
+
+}
