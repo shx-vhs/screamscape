@@ -1,4 +1,5 @@
 import time, os, wifi, socketpool
+import struct
 import board  # pylint:disable=wrong-import-order
 import busio  # pylint:disable=wrong-import-order
 import microosc
@@ -7,20 +8,59 @@ from adafruit_bno08x.uart import BNO08X_UART
 
 
 "-----------------------------------------------------------"
-
 """Set up UART for the BNO085 sensor"""
 
 try:
     uart = busio.UART(board.TX, board.RX, baudrate=3000000, receiver_buffer_size=2048)
     bno = BNO08X_UART(uart)
     print("UART connection with BNO085 successful.")
+    print("---")
 except Exception as e:
     print(f"Failed to connect to BNO085 via UART: {e}")
+    print("---")
 
 "-----------------------------------------------------------"
-
-
 """WiFi and OSC setup"""
+
+def create_osc_packet(address, *values):
+    packet = bytearray()
+    packet.extend(address.encode("utf-8"))
+
+    # Pad address to the next multiple of 4
+    packet.extend(b'\0' * (4 - (len(packet) % 4)))
+
+    # Append type tag
+    typetag = "," + "".join(["f" if isinstance(value, float) else "i" if isinstance(value, int) else "s" for value in values])
+    packet.extend(typetag.encode("utf-8"))
+
+    # Pad type tag
+    packet.extend(b'\0' * (4 - (len(packet) % 4)))
+
+    # Append each value
+    for value in values:
+        if isinstance(value, float):
+            packet.extend(struct.pack(">f", value))
+        elif isinstance(value, int):
+            packet.extend(struct.pack(">i", value))
+        elif isinstance(value, str):
+            packet.extend(value.encode("utf-8"))
+            packet.extend(b'\0' * (4 - (len(value) % 4)))
+
+    return packet
+
+
+class OSCClient:
+    def __init__(self, socket_source, host, port):
+        self.host = host
+        self.port = port
+        # Create a socket using the socketpool from wifi.radio
+        self.sock = socket_source.socket()
+
+    def send(self, osc_packet):
+        # Send the OSC packet to the specified host and port
+        self.sock.sendto(osc_packet, (self.host, self.port))
+
+
 
 # Retrieves network credentials from settings.toml file on board drive
 ssid = os.getenv("CIRCUITPY_WIFI_SSID")
@@ -28,15 +68,17 @@ password = os.getenv("CIRCUITPY_WIFI_PASSWORD")
 UDP_HOST = os.getenv("CIRCUITPY_HOST_IP")
 UDP_PORT = 8000
 
-print("Connecting to WiFi", ssid)
+print("Connecting to WiFi", ssid, "...")
+print("---")
 wifi.radio.connect(ssid, password)
 print("Connected to WiFi")
-
-# Setup UDP socket
-socket_pool = socketpool.SocketPool(wifi.radio)
+print("---")
 
 # Create an OSC client
-osc = microosc.OSCClient(socket_pool, UDP_HOST, UDP_PORT)
+socket_pool = socketpool.SocketPool(wifi.radio)
+osc = OSCClient(socket_pool, UDP_HOST, UDP_PORT)
+
+
 "-----------------------------------------------------------"
 
 
@@ -63,12 +105,6 @@ bno.enable_feature(adafruit_bno08x.BNO_REPORT_SHAKE_DETECTOR)
 
 
 """Set up utility functions"""
-
-def padding(string_to_pad):
-
-    padding_length = (4 - len(string_to_pad) % 4) % 4
-    padded = string_to_pad + "\0" * padding_length
-    return padded
 
 def normalize(value, min_val, max_val):
     if max_val == min_val:
@@ -103,7 +139,6 @@ throw a strange error that has been solved for now by adding a fourth value (sta
 while True:
     current_time = time.monotonic()
 
-    # 400 Hz data (accelerometer, gyro, and quaternion)
     if current_time - last_update_400hz >= interval_400hz:
     # Fetch 400Hz data
 
@@ -125,18 +160,14 @@ while True:
         gyro_y = round(gyro_y, 2)
         gyro_z = round(gyro_z, 2)
 
+
+
         # Create OSC messages
-        lin_accel_data = microosc.OscMsg("/lin_accel",
-        [lin_accel_x, lin_accel_y, lin_accel_z, 0],("f", "f", "f", "i",))
+        lin_accel_data = create_osc_packet("/lin_accel", lin_accel_x, lin_accel_y, lin_accel_z, 0)
+        gyro_data = create_osc_packet("/gyro", gyro_x, gyro_y, gyro_z, 0)
+        game_quat_data = create_osc_packet("/quat", quat_i, quat_j, quat_k, quat_real)
+        game_quat_data_viz = create_osc_packet("/quat_viz", quat_i, quat_k, quat_j * -1, quat_real)
 
-        gyro_data = microosc.OscMsg("/gyro",
-        [gyro_x, gyro_y, gyro_z, 0], ("f", "f", "f", "i",))  # fmt: skip
-
-        game_quat_data = microosc.OscMsg("/quat",
-        [quat_i, quat_j, quat_k, quat_real], ("f", "f", "f", "f",))  # fmt: skip
-
-        game_quat_data_viz = microosc.OscMsg("/quat_viz",
-        [quat_i, quat_k, quat_j * -1, quat_real], ("f", "f", "f", "f",))  # fmt: skip
 
         # Send OSC messages
         try:
@@ -147,36 +178,34 @@ while True:
         except Exception as e:
             print(f"Error sending OSC data: {e}")
 
-
-        # Update the last 400Hz update time
         last_update_400hz = current_time
 
-    # 30 Hz data (step counter, stability classification, activity classification)
+
     if current_time - last_update_30hz >= interval_30hz:
     # Fetch 30Hz data
 
         steps = bno.steps
-        stability = padding(bno.stability_classification)
-        activity = bno.activity_classification
-        most_likely = activity["most_likely"]
-        padded_most_likely = padding(most_likely)
+        stability_class = bno.stability_classification
+#         activity_class = bno.activity_classification
+#         most_likely = activity_class["most_likely"]
 
-        steps_data = microosc.OscMsg("/steps", [steps], ("i",))
 
-        stability_data = microosc.OscMsg(
-            "/stability",
-            [stability], ("s",))
+        steps_data = create_osc_packet("/steps", steps)
+        padded_stability_class = stability_class + ("\0" * (4 - len(stability_class) % 4))
+        stability_data = create_osc_packet("/stability", padded_stability_class)
 
-        activity_data = microosc.OscMsg(
-            "/activity",
-            [padded_most_likely, activity[most_likely] / 100], ("s", "f"))
+#         activity_data = microosc.OscMsg(
+#             "/activity_class",
+#              [most_likely, activity_class[most_likely] / 100], ("i", "f"))
 
-    # Send OSC messages
-        osc.send(steps_data)
-        osc.send(stability_data)
-        osc.send(activity_data)
+#        Send OSC messages
+        try:
+            osc.send(steps_data)
+            osc.send(stability_data)
+#           osc.send(activity_data)
+        except Exception as e:
+            print(f"Error sending OSC data: {e}")
 
-#        Update the last 30Hz update time
         last_update_30hz = current_time
 
 
