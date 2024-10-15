@@ -3420,10 +3420,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 962.0, 816.5, 245.0, 22.0 ],
 					"priority" : 					{
+						"motion_input::mo.sends::set" : -1,
 						"motion_input::mo.crosspatch::ins" : -1,
 						"motion_input::mo.crosspatch::outs" : -1,
-						"motion_input::mo.crosspatch::crosspatch" : 1,
-						"motion_input::mo.sends::set" : -1
+						"motion_input::mo.crosspatch::crosspatch" : 1
 					}
 ,
 					"saved_object_attributes" : 					{
@@ -7389,32 +7389,13 @@
 			"obj-15::obj-6" : [ "live.text[8]", "live.text", 0 ],
 			"obj-15::obj-85" : [ "live.text[7]", "live.text", 0 ],
 			"obj-15::obj-9" : [ "live.text[6]", "live.text", 0 ],
+			"obj-20::obj-111::obj-1" : [ "live.text[298]", "live.text", 0 ],
+			"obj-20::obj-111::obj-18" : [ "live.text[928]", "live.text", 0 ],
+			"obj-20::obj-111::obj-2" : [ "live.text[297]", "live.text", 0 ],
+			"obj-20::obj-111::obj-37" : [ "live.numbox[73]", "live.numbox", 0 ],
+			"obj-20::obj-111::obj-39" : [ "live.numbox[83]", "live.numbox", 0 ],
+			"obj-20::obj-111::obj-42" : [ "live.text[121]", "live.text", 0 ],
 			"obj-20::obj-12::obj-6" : [ "live.text[616]", "live.text", 0 ],
-			"obj-20::obj-15::obj-1" : [ "live.text[298]", "live.text", 0 ],
-			"obj-20::obj-15::obj-18" : [ "live.text[928]", "live.text", 0 ],
-			"obj-20::obj-15::obj-2" : [ "live.text[297]", "live.text", 0 ],
-			"obj-20::obj-15::obj-37" : [ "live.numbox[73]", "live.numbox", 0 ],
-			"obj-20::obj-15::obj-39" : [ "live.numbox[83]", "live.numbox", 0 ],
-			"obj-20::obj-15::obj-42" : [ "live.text[121]", "live.text", 0 ],
-			"obj-20::obj-29::obj-107::obj-1" : [ "live.text[94]", "live.text", 0 ],
-			"obj-20::obj-29::obj-123::obj-1" : [ "live.text[220]", "live.text", 0 ],
-			"obj-20::obj-29::obj-15" : [ "live.numbox[7]", "live.text", 0 ],
-			"obj-20::obj-29::obj-1::obj-1" : [ "live.text[122]", "live.text", 0 ],
-			"obj-20::obj-29::obj-36::obj-1" : [ "live.text[126]", "live.text", 0 ],
-			"obj-20::obj-29::obj-4" : [ "live.text[603]", "live.text", 0 ],
-			"obj-20::obj-29::obj-40::obj-1" : [ "live.text[95]", "live.text", 0 ],
-			"obj-20::obj-29::obj-41::obj-1" : [ "live.text[96]", "live.text", 0 ],
-			"obj-20::obj-29::obj-42::obj-1" : [ "live.text[97]", "live.text", 0 ],
-			"obj-20::obj-29::obj-43::obj-1" : [ "live.text[127]", "live.text", 0 ],
-			"obj-20::obj-29::obj-44::obj-1" : [ "live.text[128]", "live.text", 0 ],
-			"obj-20::obj-29::obj-45::obj-1" : [ "live.text[129]", "live.text", 0 ],
-			"obj-20::obj-29::obj-46::obj-1" : [ "live.text[130]", "live.text", 0 ],
-			"obj-20::obj-29::obj-47::obj-1" : [ "live.text[141]", "live.text", 0 ],
-			"obj-20::obj-29::obj-48::obj-1" : [ "live.text[142]", "live.text", 0 ],
-			"obj-20::obj-29::obj-49::obj-1" : [ "live.text[143]", "live.text", 0 ],
-			"obj-20::obj-29::obj-50::obj-1" : [ "live.text[144]", "live.text", 0 ],
-			"obj-20::obj-29::obj-56" : [ "live.numbox[49]", "live.numbox", 0 ],
-			"obj-20::obj-29::obj-74::obj-1" : [ "live.text[93]", "live.text", 0 ],
 			"obj-20::obj-30::obj-21" : [ "live.text[17]", "live.text", 0 ],
 			"obj-20::obj-30::obj-3" : [ "slider-[2]", "slider-", 0 ],
 			"obj-20::obj-30::obj-35" : [ "live.text[18]", "live.text", 0 ],
@@ -7554,66 +7535,6 @@
 ,
 				"obj-15::obj-9" : 				{
 					"parameter_longname" : "live.text[6]"
-				}
-,
-				"obj-20::obj-29::obj-107::obj-1" : 				{
-					"parameter_longname" : "live.text[94]"
-				}
-,
-				"obj-20::obj-29::obj-1::obj-1" : 				{
-					"parameter_longname" : "live.text[122]"
-				}
-,
-				"obj-20::obj-29::obj-36::obj-1" : 				{
-					"parameter_longname" : "live.text[126]"
-				}
-,
-				"obj-20::obj-29::obj-40::obj-1" : 				{
-					"parameter_longname" : "live.text[95]"
-				}
-,
-				"obj-20::obj-29::obj-41::obj-1" : 				{
-					"parameter_longname" : "live.text[96]"
-				}
-,
-				"obj-20::obj-29::obj-42::obj-1" : 				{
-					"parameter_longname" : "live.text[97]"
-				}
-,
-				"obj-20::obj-29::obj-43::obj-1" : 				{
-					"parameter_longname" : "live.text[127]"
-				}
-,
-				"obj-20::obj-29::obj-44::obj-1" : 				{
-					"parameter_longname" : "live.text[128]"
-				}
-,
-				"obj-20::obj-29::obj-45::obj-1" : 				{
-					"parameter_longname" : "live.text[129]"
-				}
-,
-				"obj-20::obj-29::obj-46::obj-1" : 				{
-					"parameter_longname" : "live.text[130]"
-				}
-,
-				"obj-20::obj-29::obj-47::obj-1" : 				{
-					"parameter_longname" : "live.text[141]"
-				}
-,
-				"obj-20::obj-29::obj-48::obj-1" : 				{
-					"parameter_longname" : "live.text[142]"
-				}
-,
-				"obj-20::obj-29::obj-49::obj-1" : 				{
-					"parameter_longname" : "live.text[143]"
-				}
-,
-				"obj-20::obj-29::obj-50::obj-1" : 				{
-					"parameter_longname" : "live.text[144]"
-				}
-,
-				"obj-20::obj-29::obj-74::obj-1" : 				{
-					"parameter_longname" : "live.text[93]"
 				}
 ,
 				"obj-20::obj-30::obj-21" : 				{
@@ -7915,13 +7836,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "a-mo.send.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/modulo/misc/abstractions",
-				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/modulo/misc/abstractions",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "a-mo.settings.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/modulo/misc/abstractions",
 				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/modulo/misc/abstractions",
@@ -8003,13 +7917,6 @@
 				"bootpath" : "~/Documents/Max 8/Packages/modulo/misc/js",
 				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/modulo/misc/js",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mo.sends.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/modulo/patchers/route",
-				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/modulo/patchers/route",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -8104,6 +8011,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "screamscape[4]_20241015.maxsnap",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/screamscape/max patches/screamscape/data",
+				"patcherrelativepath" : "../data",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "sub-freq_nharm.txt",
 				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/screamscape/max patches/screamscape/data",
 				"patcherrelativepath" : "../data",
@@ -8171,31 +8085,19 @@
 						"live.numbox[22]" : 0.5,
 						"live.numbox[23]" : 0.5,
 						"live.numbox[352]" : 1.0,
-						"live.numbox[49]" : 4.0,
 						"live.numbox[6]" : 2.0,
 						"live.numbox[73]" : 10.0,
-						"live.numbox[7]" : 0.0,
 						"live.numbox[83]" : 6.0,
 						"live.numbox[87]" : 0.5,
 						"live.numbox[9]" : 1.0,
 						"live.text" : 0.0,
 						"live.text[10]" : 0.0,
 						"live.text[11]" : 0.0,
-						"live.text[121]" : 0.0,
-						"live.text[122]" : 0.0,
-						"live.text[126]" : 0.0,
-						"live.text[127]" : 0.0,
-						"live.text[128]" : 0.0,
-						"live.text[129]" : 0.0,
+						"live.text[121]" : 1.0,
 						"live.text[12]" : 0.0,
-						"live.text[130]" : 0.0,
 						"live.text[139]" : 0.0,
 						"live.text[13]" : 0.0,
 						"live.text[140]" : 0.0,
-						"live.text[141]" : 0.0,
-						"live.text[142]" : 0.0,
-						"live.text[143]" : 0.0,
-						"live.text[144]" : 0.0,
 						"live.text[14]" : 1.0,
 						"live.text[15]" : 0.0,
 						"live.text[16]" : 0.0,
@@ -8206,7 +8108,6 @@
 						"live.text[1]" : 0.0,
 						"live.text[20]" : 0.0,
 						"live.text[21]" : 0.0,
-						"live.text[220]" : 0.0,
 						"live.text[22]" : 0.0,
 						"live.text[23]" : 0.0,
 						"live.text[24]" : 0.0,
@@ -8235,7 +8136,6 @@
 						"live.text[58]" : 0.0,
 						"live.text[59]" : 1.0,
 						"live.text[5]" : 0.0,
-						"live.text[603]" : 0.0,
 						"live.text[60]" : 0.0,
 						"live.text[616]" : 0.0,
 						"live.text[61]" : 0.0,
@@ -8248,11 +8148,6 @@
 						"live.text[91]" : 0.0,
 						"live.text[928]" : 0.0,
 						"live.text[92]" : 0.0,
-						"live.text[93]" : 0.0,
-						"live.text[94]" : 0.0,
-						"live.text[95]" : 0.0,
-						"live.text[96]" : 0.0,
-						"live.text[97]" : 0.0,
 						"live.text[9]" : 0.0,
 						"output" : 1.0,
 						"pan" : 0.0,
@@ -8266,10 +8161,10 @@
 						"rec" : 0.0,
 						"slider-[1]" : 0.0,
 						"slider-[20]" : 0.0,
-						"slider-[21]" : 0.001999999582767,
-						"slider-[2]" : 0.009999997913837,
+						"slider-[21]" : 0.000916373577776,
+						"slider-[2]" : 0.0,
 						"slider-[3]" : 0.0,
-						"slider-[4]" : 1.0,
+						"slider-[4]" : 0.049999997019768,
 						"slider-[51]" : 0.0,
 						"slider-[5]" : 0.0,
 						"slider-[6]" : 0.0,
@@ -8293,7 +8188,7 @@
 			}
 ,
 			"snapshotlist" : 			{
-				"current_snapshot" : 4,
+				"current_snapshot" : 5,
 				"entries" : [ 					{
 						"filetype" : "C74Snapshot",
 						"version" : 2,
@@ -8527,6 +8422,24 @@
 						"origin" : "screamscape",
 						"type" : "patcher",
 						"subtype" : "Undefined",
+						"embed" : 0,
+						"fileref" : 						{
+							"name" : "screamscape[4]",
+							"filename" : "screamscape[4].maxsnap",
+							"filepath" : "~/MEGA/Homebase/10 Projekte/dev/screamscape/max patches/screamscape/data",
+							"filepos" : -1,
+							"snapshotfileid" : "f2ec636117cfb94ec95673d7faa943b1"
+						}
+
+					}
+, 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "screamscape[4]",
+						"origin" : "screamscape",
+						"type" : "patcher",
+						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
 							"valuedictionary" : 							{
@@ -8560,31 +8473,19 @@
 									"live.numbox[22]" : 0.5,
 									"live.numbox[23]" : 0.5,
 									"live.numbox[352]" : 1.0,
-									"live.numbox[49]" : 4.0,
 									"live.numbox[6]" : 2.0,
 									"live.numbox[73]" : 10.0,
-									"live.numbox[7]" : 0.0,
 									"live.numbox[83]" : 6.0,
 									"live.numbox[87]" : 0.5,
 									"live.numbox[9]" : 1.0,
 									"live.text" : 0.0,
 									"live.text[10]" : 0.0,
 									"live.text[11]" : 0.0,
-									"live.text[121]" : 0.0,
-									"live.text[122]" : 0.0,
-									"live.text[126]" : 0.0,
-									"live.text[127]" : 0.0,
-									"live.text[128]" : 0.0,
-									"live.text[129]" : 0.0,
+									"live.text[121]" : 1.0,
 									"live.text[12]" : 0.0,
-									"live.text[130]" : 0.0,
 									"live.text[139]" : 0.0,
 									"live.text[13]" : 0.0,
 									"live.text[140]" : 0.0,
-									"live.text[141]" : 0.0,
-									"live.text[142]" : 0.0,
-									"live.text[143]" : 0.0,
-									"live.text[144]" : 0.0,
 									"live.text[14]" : 1.0,
 									"live.text[15]" : 0.0,
 									"live.text[16]" : 0.0,
@@ -8595,7 +8496,6 @@
 									"live.text[1]" : 0.0,
 									"live.text[20]" : 0.0,
 									"live.text[21]" : 0.0,
-									"live.text[220]" : 0.0,
 									"live.text[22]" : 0.0,
 									"live.text[23]" : 0.0,
 									"live.text[24]" : 0.0,
@@ -8624,7 +8524,6 @@
 									"live.text[58]" : 0.0,
 									"live.text[59]" : 1.0,
 									"live.text[5]" : 0.0,
-									"live.text[603]" : 0.0,
 									"live.text[60]" : 0.0,
 									"live.text[616]" : 0.0,
 									"live.text[61]" : 0.0,
@@ -8637,11 +8536,6 @@
 									"live.text[91]" : 0.0,
 									"live.text[928]" : 0.0,
 									"live.text[92]" : 0.0,
-									"live.text[93]" : 0.0,
-									"live.text[94]" : 0.0,
-									"live.text[95]" : 0.0,
-									"live.text[96]" : 0.0,
-									"live.text[97]" : 0.0,
 									"live.text[9]" : 0.0,
 									"output" : 1.0,
 									"pan" : 0.0,
@@ -8655,10 +8549,10 @@
 									"rec" : 0.0,
 									"slider-[1]" : 0.0,
 									"slider-[20]" : 0.0,
-									"slider-[21]" : 0.001999999582767,
-									"slider-[2]" : 0.009999997913837,
+									"slider-[21]" : 0.000916373577776,
+									"slider-[2]" : 0.0,
 									"slider-[3]" : 0.0,
-									"slider-[4]" : 1.0,
+									"slider-[4]" : 0.049999997019768,
 									"slider-[51]" : 0.0,
 									"slider-[5]" : 0.0,
 									"slider-[6]" : 0.0,
@@ -8683,10 +8577,10 @@
 ,
 						"fileref" : 						{
 							"name" : "screamscape[4]",
-							"filename" : "screamscape[4].maxsnap",
+							"filename" : "screamscape[4]_20241015.maxsnap",
 							"filepath" : "~/MEGA/Homebase/10 Projekte/dev/screamscape/max patches/screamscape/data",
 							"filepos" : -1,
-							"snapshotfileid" : "f2ec636117cfb94ec95673d7faa943b1"
+							"snapshotfileid" : "90c8d21f66426e99050c61d523f52759"
 						}
 
 					}

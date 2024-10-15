@@ -41,34 +41,20 @@
 					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
 					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
 					"master_strip::mo.latch::rate" : [ 1 ],
-					"motion_input::notepad-[1]" : [ "On", "Table" ],
-					"motion_input::notepad-[2]" : [ 0 ],
-					"motion_input::notepad-[3]" : [ "<empty>" ],
+					"motion_input::notepad-[1]" : [ "Bogus_String" ],
+					"motion_input::notepad-[2]" : [ 10 ],
+					"motion_input::notepad-[3]" : [ "Still" ],
 					"motion_input::notepad-[4]" : [ 0.970000028610229 ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [ "8000" ],
 					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
 					"motion_input::mo.monitor::lines" : [ 1.0 ],
-					"motion_input::mo.crosspatch::ins" : [ 10.0 ],
-					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
-					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
-					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
-					"motion_input::mo.crosspatch::crosspatch" : [ 						{
-							"data" : 							{
-								"numins" : 10,
-								"numouts" : 6
-							}
-
-						}
- ],
 					"motion_input::mo.hslider::slider" : [ 0.0 ],
 					"motion_input::mo.hslider::mute" : [ 0.0 ],
 					"motion_input::mo.hslider::polarity" : [ 0.0 ],
 					"motion_input::mo.hslider::color" : [ 0 ],
 					"motion_input::mo.hslider::length" : [ 1.0 ],
 					"motion_input::mo.hslider::style" : [ 0.0 ],
-					"motion_input::mo.vslider::slider" : [ 0.0 ],
+					"motion_input::mo.vslider::slider" : [ 0.000631566080244 ],
 					"motion_input::mo.vslider::mute" : [ 0.0 ],
 					"motion_input::mo.vslider::polarity" : [ 0.0 ],
 					"motion_input::mo.vslider::color" : [ 0 ],
@@ -80,13 +66,13 @@
 					"motion_input::mo.hslider[3]::color" : [ 0 ],
 					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
 					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
-					"motion_input::mo.vslider[1]::slider" : [ 0.009999997913837 ],
+					"motion_input::mo.vslider[1]::slider" : [ -0.009999997913837 ],
 					"motion_input::mo.vslider[1]::mute" : [ 0.0 ],
 					"motion_input::mo.vslider[1]::polarity" : [ 1.0 ],
 					"motion_input::mo.vslider[1]::color" : [ 0 ],
 					"motion_input::mo.vslider[1]::length" : [ 2.0 ],
 					"motion_input::mo.vslider[1]::style" : [ 0.0 ],
-					"motion_input::mo.vslider[2]::slider" : [ 0.001999999582767 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.0 ],
 					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
 					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
 					"motion_input::mo.vslider[2]::color" : [ 0 ],
@@ -96,19 +82,19 @@
 					"motion_input::mo.tabs::mode" : [ 0.0 ],
 					"motion_input::mo.tabs::mute" : [ 0.0 ],
 					"motion_input::mo.tabs::tab" : [ -1 ],
-					"motion_input::mo.vslider[3]::slider" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ -1.0 ],
 					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
 					"motion_input::mo.vslider[3]::polarity" : [ 1.0 ],
 					"motion_input::mo.vslider[3]::color" : [ 0 ],
 					"motion_input::mo.vslider[3]::length" : [ 1.0 ],
 					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
-					"motion_input::mo.hslider[1]::slider" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ 0.049999997019768 ],
 					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
 					"motion_input::mo.hslider[1]::polarity" : [ 0.0 ],
 					"motion_input::mo.hslider[1]::color" : [ 0 ],
 					"motion_input::mo.hslider[1]::length" : [ 1.0 ],
 					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
-					"motion_input::mo.hslider[2]::slider" : [ 0.0 ],
+					"motion_input::mo.hslider[2]::slider" : [ -0.0 ],
 					"motion_input::mo.hslider[2]::mute" : [ 0.0 ],
 					"motion_input::mo.hslider[2]::polarity" : [ 1.0 ],
 					"motion_input::mo.hslider[2]::color" : [ 0 ],
@@ -138,17 +124,49 @@
 					"motion_input::mo.scale[4]::mute" : [ 0.0 ],
 					"motion_input::mo.scale[3]::amount[1]" : [ 0.5 ],
 					"motion_input::mo.scale[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::set" : [ "" ],
-					"motion_input::mo.sends::voices" : [ 4.0 ],
-					"motion_input::mo.sends::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[1]::send" : [ "" ],
-					"motion_input::mo.sends::[1]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[2]::send" : [ "" ],
-					"motion_input::mo.sends::[2]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[3]::send" : [ "" ],
-					"motion_input::mo.sends::[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[4]::send" : [ "" ],
-					"motion_input::mo.sends::[4]::mute" : [ 0.0 ]
+					"motion_input::mo.crosspatch::ins" : [ 10.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 1.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 10,
+								"numouts" : 6,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 1,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 2,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 3,
+										"out" : 3,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 4,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 5,
+										"out" : 5,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ]
 				}
 
 			}
@@ -196,23 +214,9 @@
 					"motion_input::notepad-[2]" : [ 0 ],
 					"motion_input::notepad-[3]" : [ "<empty>" ],
 					"motion_input::notepad-[4]" : [ 0.970000028610229 ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [ "8000" ],
 					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
 					"motion_input::mo.monitor::lines" : [ 1.0 ],
-					"motion_input::mo.crosspatch::ins" : [ 13.0 ],
-					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
-					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
-					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
-					"motion_input::mo.crosspatch::crosspatch" : [ 						{
-							"data" : 							{
-								"numins" : 13,
-								"numouts" : 6
-							}
-
-						}
- ],
 					"motion_input::mo.hslider::slider" : [ 0.0 ],
 					"motion_input::mo.hslider::mute" : [ 0.0 ],
 					"motion_input::mo.hslider::polarity" : [ 0.0 ],
@@ -289,17 +293,18 @@
 					"motion_input::mo.scale[4]::mute" : [ 0.0 ],
 					"motion_input::mo.scale[3]::amount[1]" : [ 0.5 ],
 					"motion_input::mo.scale[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::set" : [ "" ],
-					"motion_input::mo.sends::voices" : [ 4.0 ],
-					"motion_input::mo.sends::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[1]::send" : [ "" ],
-					"motion_input::mo.sends::[1]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[2]::send" : [ "" ],
-					"motion_input::mo.sends::[2]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[3]::send" : [ "" ],
-					"motion_input::mo.sends::[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[4]::send" : [ "" ],
-					"motion_input::mo.sends::[4]::mute" : [ 0.0 ]
+					"motion_input::mo.crosspatch::ins" : [ 13.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 13,
+								"numouts" : 6
+							}
+
+						}
+ ]
 				}
 
 			}
@@ -347,16 +352,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -433,17 +431,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
@@ -491,16 +483,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -577,17 +562,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
@@ -635,16 +614,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -721,17 +693,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
@@ -779,29 +745,9 @@
 					"motion_input::notepad-[2]" : [ 72 ],
 					"motion_input::notepad-[3]" : [ "Still" ],
 					"motion_input::notepad-[4]" : [ 0.970000028610229 ],
-					"motion_input::mo.sliders[1]" : [ 0.009999997913837, -0.009999997913837, -1.0, 0.029999993741512, -0.005999998748302, -0.00799999833107, -0.003999999165535, -0.001343708269101, 0.000189436967815, 0.009100256116405 ],
-					"motion_input::mo.sliders[2]" : [ 0.0, -0.949999809265137, 0.019999995827675, 0.079999983310699, 0.0, -0.019999995827675 ],
 					"motion_input::mo.udpreceive::port" : [ "8000" ],
 					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
 					"motion_input::mo.monitor::lines" : [ 1.0 ],
-					"motion_input::mo.crosspatch::ins" : [ 13.0 ],
-					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
-					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
-					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
-					"motion_input::mo.crosspatch::crosspatch" : [ 						{
-							"data" : 							{
-								"numins" : 13,
-								"numouts" : 6,
-								"connections" : [ 									{
-										"in" : 2,
-										"out" : 1,
-										"gain" : 1.0
-									}
- ]
-							}
-
-						}
- ],
 					"motion_input::mo.hslider::slider" : [ 0.000807993986237 ],
 					"motion_input::mo.hslider::mute" : [ 0.0 ],
 					"motion_input::mo.hslider::polarity" : [ 0.0 ],
@@ -878,17 +824,24 @@
 					"motion_input::mo.scale[4]::mute" : [ 0.0 ],
 					"motion_input::mo.scale[3]::amount[1]" : [ 0.5 ],
 					"motion_input::mo.scale[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::set" : [ "" ],
-					"motion_input::mo.sends::voices" : [ 4.0 ],
-					"motion_input::mo.sends::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[1]::send" : [ "" ],
-					"motion_input::mo.sends::[1]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[2]::send" : [ "" ],
-					"motion_input::mo.sends::[2]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[3]::send" : [ "" ],
-					"motion_input::mo.sends::[3]::mute" : [ 0.0 ],
-					"motion_input::mo.sends::[4]::send" : [ "" ],
-					"motion_input::mo.sends::[4]::mute" : [ 0.0 ]
+					"motion_input::mo.crosspatch::ins" : [ 13.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 6.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 13,
+								"numouts" : 6,
+								"connections" : [ 									{
+										"in" : 2,
+										"out" : 1,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ]
 				}
 
 			}
@@ -936,16 +889,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -1022,17 +968,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
@@ -1080,16 +1020,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -1166,17 +1099,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
@@ -1224,16 +1151,9 @@
 					"motion_input::notepad-[2]" : [  ],
 					"motion_input::notepad-[3]" : [  ],
 					"motion_input::notepad-[4]" : [  ],
-					"motion_input::mo.sliders[1]" : [  ],
-					"motion_input::mo.sliders[2]" : [  ],
 					"motion_input::mo.udpreceive::port" : [  ],
 					"motion_input::mo.udpreceive::mute" : [  ],
 					"motion_input::mo.monitor::lines" : [  ],
-					"motion_input::mo.crosspatch::ins" : [  ],
-					"motion_input::mo.crosspatch::outs" : [  ],
-					"motion_input::mo.crosspatch::connect" : [  ],
-					"motion_input::mo.crosspatch::mute" : [  ],
-					"motion_input::mo.crosspatch::crosspatch" : [  ],
 					"motion_input::mo.hslider::slider" : [  ],
 					"motion_input::mo.hslider::mute" : [  ],
 					"motion_input::mo.hslider::polarity" : [  ],
@@ -1310,17 +1230,11 @@
 					"motion_input::mo.scale[4]::mute" : [  ],
 					"motion_input::mo.scale[3]::amount[1]" : [  ],
 					"motion_input::mo.scale[3]::mute" : [  ],
-					"motion_input::mo.sends::set" : [  ],
-					"motion_input::mo.sends::voices" : [  ],
-					"motion_input::mo.sends::mute" : [  ],
-					"motion_input::mo.sends::[1]::send" : [  ],
-					"motion_input::mo.sends::[1]::mute" : [  ],
-					"motion_input::mo.sends::[2]::send" : [  ],
-					"motion_input::mo.sends::[2]::mute" : [  ],
-					"motion_input::mo.sends::[3]::send" : [  ],
-					"motion_input::mo.sends::[3]::mute" : [  ],
-					"motion_input::mo.sends::[4]::send" : [  ],
-					"motion_input::mo.sends::[4]::mute" : [  ]
+					"motion_input::mo.crosspatch::ins" : [  ],
+					"motion_input::mo.crosspatch::outs" : [  ],
+					"motion_input::mo.crosspatch::connect" : [  ],
+					"motion_input::mo.crosspatch::mute" : [  ],
+					"motion_input::mo.crosspatch::crosspatch" : [  ]
 				}
 
 			}
