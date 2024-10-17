@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1600.0, 417.0, 1278.0, 813.0 ],
+		"rect" : [ -1600.0, 417.0, 1600.0, 813.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,31 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"annotation" : "Crossfade two stereo inputs.",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-18",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "AudioXfaderIn.maxpat",
-					"numinlets" : 5,
-					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 645.0, 330.0, 139.0, 29.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 131.0, 222.5, 139.0, 29.0 ],
-					"varname" : "AudioXfaderIn",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-95",
 					"maxclass" : "newobj",
@@ -164,7 +139,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 600.0, -60.0, 872.0, 300.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 570.0, 230.0, 859.0, 265.0 ],
+					"presentation_rect" : [ 23.5, 282.0, 884.0, 316.0 ],
 					"varname" : "motion_input",
 					"viewvisibility" : 1
 				}
@@ -229,7 +204,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 1245.0, 150.0, 214.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1215.0, 435.0, 214.0, 45.0 ],
+					"presentation_rect" : [ 592.0, 171.0, 214.0, 45.0 ],
 					"varname" : "mo.slider",
 					"viewvisibility" : 1
 				}
@@ -252,7 +227,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 9.891304433345795, -105.0, 300.0, 263.376983999999993 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 30.0, 30.0, 284.0, 246.376983999999993 ],
+					"presentation_rect" : [ 15.0, 15.0, 300.0, 255.0 ],
 					"varname" : "master_strip",
 					"viewvisibility" : 1
 				}
@@ -275,7 +250,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 28.0, 214.532866836717574, 530.391304433345795, 307.965342760299791 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 30.0, 285.0, 510.0, 460.465342760299791 ],
+					"presentation_rect" : [ 962.0, 48.0, 510.0, 460.465342760299791 ],
 					"varname" : "modulators",
 					"viewvisibility" : 1
 				}
@@ -507,7 +482,6 @@
 			}
 , 			{
 				"box" : 				{
-					"active" : 0,
 					"id" : "obj-129",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -517,7 +491,7 @@
 					"patching_rect" : [ 1570.25, 582.5, 165.75, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 678.5, 60.0, 161.5, 17.0 ],
-					"text" : "PRESET 1 LOCKED",
+					"text" : "OVERWRITE PRESET 1",
 					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1391,7 +1365,7 @@
 					"patching_rect" : [ 1402.0, 582.5, 135.75, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 678.5, 81.0, 161.5, 17.0 ],
-					"text" : "SAVE AS PRESET 1",
+					"text" : "SAVE AS PRESET 10",
 					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -2307,7 +2281,7 @@
 					"patching_rect" : [ 1139.5, 554.0, 268.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 419.75, 32.0, 210.0, 23.0 ],
-					"text" : "(undefined)"
+					"text" : "Init"
 				}
 
 			}
@@ -3512,10 +3486,7 @@
 					"priority" : 					{
 						"motion_input::mo.crosspatch::ins" : -1,
 						"motion_input::mo.crosspatch::outs" : -1,
-						"motion_input::mo.crosspatch::crosspatch" : 1,
-						"mo.crosspatch::ins" : -1,
-						"mo.crosspatch::crosspatch" : 1,
-						"mo.crosspatch::outs" : -1
+						"motion_input::mo.crosspatch::crosspatch" : 1
 					}
 ,
 					"saved_object_attributes" : 					{
@@ -3539,6 +3510,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 292.0, 734.5, 213.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 294.0, 834.5, 213.0, 24.0 ],
 					"text" : "Patch color Coding"
 				}
 
@@ -3551,6 +3524,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 292.0, 760.5, 279.0, 141.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 9,
+					"presentation_rect" : [ 294.0, 860.5, 279.0, 141.0 ],
 					"text" : "Send and Receive\n\nred - audio processing\nblue - control functionality (includes play-buffer)\ngreen - preset management \nyellow - gesture-to-sound mappings\n\nSubpatches\nmagenta\n"
 				}
 
@@ -3563,6 +3539,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 28.0, 903.5, 262.0, 194.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 13,
+					"presentation_rect" : [ 30.0, 1003.5, 262.0, 194.0 ],
 					"text" : "Currently exposed parameters:\n\n- Number of modulators\n\n- Subharmonics gain\n- Subharmonics cutoff frequency\n- Sub-harmonics interpolation time\n\n- Noise injection amplitude\n- Noise Injection smoothing (enveloped?)\n\n\n- Global roughness amplitude\n"
 				}
 
@@ -3576,6 +3555,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 28.0, 695.0, 140.0, 27.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 30.0, 795.0, 140.0, 27.0 ],
 					"text" : "TODO",
 					"textcolor" : [ 0.72156862745098, 0.023529411764706, 0.023529411764706, 1.0 ]
 				}
@@ -3600,6 +3581,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 28.0, 733.0, 262.0, 167.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 11,
+					"presentation_rect" : [ 30.0, 833.0, 262.0, 167.0 ],
 					"text" : "- seek\n- loop\n- recording function\n\n- preset delete\n\n- fix space button start/stop functionality\n- fix startup input problems (no live FX output before random file is loaded)\n\n\n"
 				}
 
@@ -4675,6 +4659,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 13.0, 686.5, 572.0, 423.5 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 15.0, 786.5, 572.0, 423.5 ],
 					"proportion" : 0.5
 				}
 
@@ -5158,9 +5144,6 @@
 			"obj-15::obj-6" : [ "live.text[8]", "live.text", 0 ],
 			"obj-15::obj-85" : [ "live.text[7]", "live.text", 0 ],
 			"obj-15::obj-9" : [ "live.text[6]", "live.text", 0 ],
-			"obj-18::obj-41" : [ "A[1]", "A", 0 ],
-			"obj-18::obj-42" : [ "B[1]", "B", 0 ],
-			"obj-18::obj-9" : [ "fade[1]", "Fade", 0 ],
 			"obj-20::obj-111::obj-1" : [ "live.text[298]", "live.text", 0 ],
 			"obj-20::obj-111::obj-18" : [ "live.text[928]", "live.text", 0 ],
 			"obj-20::obj-111::obj-2" : [ "live.text[297]", "live.text", 0 ],
@@ -5237,7 +5220,6 @@
 			"obj-20::obj-94::obj-15" : [ "live.text[91]", "live.text", 0 ],
 			"obj-20::obj-95::obj-13" : [ "live.numbox[21]", "live.numbox", 0 ],
 			"obj-20::obj-95::obj-15" : [ "live.text[90]", "live.text", 0 ],
-			"obj-31::obj-91" : [ "live.text[5]", "live.text", 0 ],
 			"obj-7::obj-118" : [ "live.text[1]", "live.text", 0 ],
 			"obj-7::obj-144" : [ "live.text[3]", "live.text", 0 ],
 			"obj-7::obj-146" : [ "textbutton", "textbutton", 0 ],
@@ -5307,18 +5289,6 @@
 ,
 				"obj-15::obj-9" : 				{
 					"parameter_longname" : "live.text[6]"
-				}
-,
-				"obj-18::obj-41" : 				{
-					"parameter_longname" : "A[1]"
-				}
-,
-				"obj-18::obj-42" : 				{
-					"parameter_longname" : "B[1]"
-				}
-,
-				"obj-18::obj-9" : 				{
-					"parameter_longname" : "fade[1]"
 				}
 ,
 				"obj-20::obj-30::obj-21" : 				{
