@@ -40,25 +40,64 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
+					"id" : "obj-229",
+					"linecount" : 3,
+					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 160.0, 99.0, 67.0, 22.0 ],
-					"text" : "delay 1000"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 640.0, 140.0, 98.0, 49.0 ],
+					"text" : ";\rangus_score 1;\rcurrent_preset 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-2",
+					"id" : "obj-5",
 					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "bang", "bang", "bang", "bang" ],
+					"patching_rect" : [ 640.0, 70.0, 52.0, 22.0 ],
+					"text" : "t b b b b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-4",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 712.0, 30.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"linecount" : 7,
+					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 660.0, 210.0, 166.0, 116.0 ],
+					"text" : ";\rloadbang bang;\ranger-init_ampmod bang;\ranger-init_ampmod mute 0;\rto_anger num-sub 5;\rreset_interp-time-break bang;\rstop_env bang;\r"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 62.0, 95.0, 67.0, 22.0 ],
-					"text" : "delay 1000"
+					"patching_rect" : [ 640.0, 30.0, 60.0, 22.0 ],
+					"text" : "loadbang"
 				}
 
 			}
@@ -69,7 +108,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 90.0, 180.0, 150.0, 33.0 ],
+					"patching_rect" : [ 1350.0, 120.0, 150.0, 33.0 ],
 					"text" : "change it to your interface once to be init on startup"
 				}
 
@@ -80,7 +119,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 410.0, 140.0, 150.0, 20.0 ],
+					"patching_rect" : [ 960.0, 260.0, 150.0, 20.0 ],
 					"text" : "Programming"
 				}
 
@@ -91,7 +130,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 310.0, 140.0, 150.0, 20.0 ],
+					"patching_rect" : [ 860.0, 260.0, 150.0, 20.0 ],
 					"text" : "Performance"
 				}
 
@@ -103,7 +142,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 510.0, 170.0, 150.0, 33.0 ],
+					"patching_rect" : [ 1060.0, 290.0, 150.0, 33.0 ],
 					"text" : "DSP Settings (Audio Status window) "
 				}
 
@@ -116,7 +155,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 410.0, 160.0, 97.0, 89.0 ],
+					"patching_rect" : [ 960.0, 280.0, 97.0, 89.0 ],
 					"text" : ";\rdsp iovs 128;\rdsp sigvs 32;\rmax overdrive 1;\rdsp takeover 1;\rdsp optimize 1"
 				}
 
@@ -129,20 +168,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 310.0, 160.0, 97.0, 76.0 ],
+					"patching_rect" : [ 860.0, 280.0, 97.0, 76.0 ],
 					"text" : ";\rdsp iovs 256;\rdsp sigvs 64;\rmax overdrive 0;\rdsp takeover 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-44",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 60.0, 40.0, 58.0, 22.0 ],
-					"text" : "loadbang"
 				}
 
 			}
@@ -153,7 +180,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, 180.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1250.0, 120.0, 29.5, 22.0 ],
 					"text" : "M4"
 				}
 
@@ -165,7 +192,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 160.0, 270.0, 150.0, 33.0 ],
+					"patching_rect" : [ 1350.0, 170.0, 150.0, 33.0 ],
 					"text" : "I/O device setting (w/o driver setting)"
 				}
 
@@ -875,7 +902,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 60.0, 290.0, 91.0, 22.0 ],
+					"patching_rect" : [ 1250.0, 190.0, 91.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1562,7 +1589,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 60.0, 260.0, 83.0, 22.0 ],
+					"patching_rect" : [ 1250.0, 160.0, 83.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1578,15 +1605,8 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-43", 0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-47", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1608,17 +1628,36 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"order" : 1,
-					"source" : [ "obj-44", 0 ]
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"order" : 0,
-					"source" : [ "obj-44", 0 ]
+					"destination" : [ "obj-229", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-5", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"source" : [ "obj-5", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}

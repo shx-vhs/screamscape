@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1566.0, 451.0, 1213.0, 779.0 ],
+		"rect" : [ -1131.0, 582.0, 1213.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -558,7 +558,7 @@
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 55.0, 260.0, 69.0, 139.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.0, 30.0, 69.0, 139.0 ],
+					"presentation_rect" : [ 80.0, 30.0, 69.0, 139.0 ],
 					"varname" : "AudioMix[3]",
 					"viewvisibility" : 1
 				}
@@ -708,8 +708,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 40.0, 360.0, 27.0 ],
-					"text" : "AUDIO ROUTING AND PROCESSING",
+					"patching_rect" : [ 60.0, 40.0, 160.0, 27.0 ],
+					"text" : "AUDIO ROUTING",
 					"textcolor" : [ 0.72156862745098, 0.023529411764706, 0.023529411764706, 1.0 ]
 				}
 
