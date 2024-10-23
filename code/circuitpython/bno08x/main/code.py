@@ -79,7 +79,42 @@ bno.enable_feature(adafruit_bno08x.BNO_REPORT_SHAKE_DETECTOR)
 
 """Set up utility functions"""
 
+# Conversion to Axis-Angle representation
+def quaternion_to_axis_angle(i, j, k, real):
+    # Compute the angle (in radians)
+    angle = 2 * math.acos(real)
+
+    # Compute the axis components
+    sin_half_angle = math.sqrt(1 - real**2)
+
+    if sin_half_angle < 1e-6:
+        # Avoid division by zero, default axis when angle is very small
+        x, y, z = 1, 0, 0
+    else:
+        x = i / sin_half_angle
+        y = j / sin_half_angle
+        z = k / sin_half_angle
+
+    return angle, (x, y, z)
+
+
+# Conversion to Euler angles
+def quaternion_to_euler(i, j, k, real):
+    # Yaw (Z-axis rotation)
+    yaw = math.atan2(2 * (real * j + i * k), 1 - 2 * (j**2 + k**2))
+
+    # Pitch (Y-axis rotation)
+    pitch = math.asin(2 * (real * k - i * j))
+
+    # Roll (X-axis rotation)
+    roll = math.atan2(2 * (real * i + j * k), 1 - 2 * (i**2 + k**2))
+
+    return yaw, pitch, roll
+
+
+
 def padding(string_to_pad):
+    # padding to a multiple of 4
     padding_length = (4 - len(string_to_pad) % 4) % 4
     padded = string_to_pad + "\0" * padding_length
     return padded
@@ -89,9 +124,7 @@ def normalize(value, min_val, max_val):
         return 0  # Return 0 if there's no range
     return 2 * ((value - min_val) / (max_val - min_val)) - 1
 
-# Define update rates (Hz)
-update_rate_400hz = 400
-update_rate_30hz = 10
+
 
 # Calculate update intervals (seconds)
 interval_400hz = 1.0 / update_rate_400hz  # 0.0025 seconds
@@ -115,12 +148,19 @@ while True:
             lin_accel_x, lin_accel_y, lin_accel_z = bno.linear_acceleration
             gyro_x, gyro_y, gyro_z = bno.gyro
             quat_i, quat_j, quat_k, quat_real = bno.game_quaternion  # pylint:disable=no-member
+            yaw, pitch, roll = quaternion_to_euler(quat_i, quat_j, quat_k, quat_real)
+            angle, axis = quaternion_to_axis_angle(quat_i, quat_j, quat_k, quat_real)
+
 
             # Round data to 0.00
             quat_i = round(quat_i, 2)
             quat_j = round(quat_j, 2)
             quat_k = round(quat_k, 2)
             quat_real = round(quat_real, 2)
+
+            yaw = round(yaw, 2)
+            pitch = round(pitch, 2)
+            roll = round( roll, 2)
 
             lin_accel_x = round(lin_accel_x, 2)
             lin_accel_y = round(lin_accel_y, 2)
@@ -131,6 +171,12 @@ while True:
             gyro_z = round(gyro_z, 2)
 
             # Create OSC messages
+            axis_angle_data = microosc.OscMsg("/axis_angle",
+            [angle, axis], ("f", "f",))
+
+            euler_angle_data = microosc.OscMsg("/euler",
+            [yaw, pitch, roll, 0], ("f", "f", "f", "i",))
+
             lin_accel_data = microosc.OscMsg("/lin_accel",
                 [lin_accel_x, lin_accel_y, lin_accel_z, 0], ("f", "f", "f", "i",))
 
@@ -144,6 +190,10 @@ while True:
                 [quat_i, quat_k, quat_j * -1, quat_real], ("f", "f", "f", "f",))
 
             # Send OSC messages with retry
+            if not send_data_with_retry(osc, axis_angle_data):
+                send_error_message(osc, "Failed to send lin_accel data")
+            if not send_data_with_retry(osc, euler_angle_data):
+                send_error_message(osc, "Failed to send lin_accel data")
             if not send_data_with_retry(osc, lin_accel_data):
                 send_error_message(osc, "Failed to send lin_accel data")
             if not send_data_with_retry(osc, gyro_data):
