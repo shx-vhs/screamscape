@@ -79,13 +79,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"linecount" : 7,
+					"linecount" : 6,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 660.0, 210.0, 166.0, 116.0 ],
-					"text" : ";\rloadbang bang;\ranger-init_ampmod bang;\ranger-init_ampmod mute 0;\rto_anger num-sub 5;\rreset_interp-time-break bang;\rstop_env bang;\r"
+					"patching_rect" : [ 660.0, 210.0, 166.0, 102.0 ],
+					"text" : ";\rloadbang bang;\ranger-init_ampmod bang;\ranger-init_ampmod mute 0;\rto_anger num-sub 5;\rreset_interp-time-break bang;\r"
 				}
 
 			}

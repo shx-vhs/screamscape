@@ -5,6 +5,9 @@ import microosc
 import math
 import adafruit_bno08x
 from adafruit_bno08x.uart import BNO08X_UART
+from analogio import AnalogIn
+
+
 
 
 "-----------------------------------------------------------"
@@ -69,35 +72,36 @@ osc = microosc.OSCClient(socket_pool, UDP_HOST, UDP_PORT)
 
 """Enable sensor data"""
 
-
+bno.enable_feature(adafruit_bno08x.BNO_REPORT_LINEAR_ACCELERATION)
 bno.enable_feature(adafruit_bno08x.BNO_REPORT_GAME_ROTATION_VECTOR)
 
 "-----------------------------------------------------------"
 
 """Set up utility functions"""
 
+vbat_voltage = AnalogIn(board.VOLTAGE_MONITOR)
+
+
+def get_voltage(pin):
+    return (pin.value * 3.3) / 65536 * 2
+
+
 
 
 # Conversion to Euler angles with normalization to -1 to 1
 def quaternion_to_euler(i, j, k, real):
-    # Normalize the quaternion
-    magnitude = math.sqrt(i**2 + j**2 + k**2 + real**2)
-    i /= magnitude
-    j /= magnitude
-    k /= magnitude
-    real /= magnitude
 
-    # Calculate yaw, pitch, roll
-    yaw = math.atan2(2 * (real * j + i * k), 1 - 2 * (j**2 + k**2))
-    pitch = math.asin(2 * (real * k - i * j))
     roll = math.atan2(2 * (real * i + j * k), 1 - 2 * (i**2 + k**2))
+    pitch = math.asin(2 * (real * k - i * j))
+    yaw = math.atan2(2 * (real * j + i * k), 1 - 2 * (j**2 + k**2))
 
     # Normalize to -1 to 1 range
-    yaw = yaw / math.pi  # Yaw normalized to -1 to 1
-    pitch = pitch / (math.pi / 2)  # Pitch normalized to -1 to 1
-    roll = roll / math.pi  # Roll normalized to -1 to 1
 
-    return yaw, pitch, roll
+    pitch = pitch / (math.pi / 2)
+    roll = roll / math.pi
+    yaw = yaw / math.pi
+
+    return pitch, roll, yaw
 
 
 
@@ -132,28 +136,40 @@ def multiply_quaternions(q1, q2):
 while True:
 
     time.sleep(0.025)
+
+    battery_voltage = get_voltage(vbat_voltage)
+
+    lin_accel_x, lin_accel_y, lin_accel_z = bno.linear_acceleration
     (quat_i, quat_j, quat_k, quat_real) = bno.game_quaternion  # pylint:disable=no-member
-#    yaw, pitch, roll = quaternion_to_euler(quat_i, quat_j, quat_k, quat_real)
 
     x, y, z, w = multiply_quaternions((quat_i, quat_j, quat_k, quat_real),
     reference_quaternion)
 
-    quaternion_adjusted = microosc.OscMsg("/quat_scaled",
-    [x, y, z, w], ("f", "f", "f", "f",))
+#    pitch, roll, yaw = quaternion_to_euler(x, y, z, w)
 
-    game_quat_viz = microosc.OscMsg("/quat_viz",
+
+    battery = microosc.OscMsg("/bat",
+    [battery_voltage], ("f",))
+
+
+    lin_accel_data = microosc.OscMsg("/lin_accel",
+    [lin_accel_x, lin_accel_y, lin_accel_z, 0], ("f", "f", "f", "i",))
+
+    quat_viz = microosc.OscMsg("/quat_viz",
     [quat_i, quat_k, quat_j * -1, quat_real], ("f", "f", "f", "f",))
 
-    quaternion = microosc.OscMsg("/quat",
-    [quat_i, quat_j, quat_k, quat_real], ("f", "f", "f", "f",))
+    quat = microosc.OscMsg("/quat",
+    [x, y, z, w], ("f", "f", "f", "f",))
 
-#    euler_angle_data = microosc.OscMsg("/euler",
-#    [yaw, pitch, roll, 0], ("f", "f", "f", "i",))
+#    euler = microosc.OscMsg("/euler",
+#    [pitch, roll, yaw, 0], ("f", "f", "f", "i",))
 
-    osc.send(quaternion_adjusted)
-    osc.send(quaternion)
-    osc.send(game_quat_viz)
-#    osc.send(euler_angle_data)
+    osc.send(lin_accel_data)
+    osc.send(battery)
+    osc.send(quat)
+    osc.send(quat_viz)
+#    osc.send(euler)
+
 
 
 
