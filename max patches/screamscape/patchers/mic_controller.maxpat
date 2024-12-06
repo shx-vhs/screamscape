@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1566.0, 451.0, 1532.0, 779.0 ],
+		"rect" : [ 34.0, 87.0, 896.0, 679.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -638,7 +638,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 243.406713217496872, 640.30781626701355, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 153.406713217496872, 90.30781626701355, 15.0, 15.0 ],
+					"presentation_rect" : [ 133.406713217496872, 70.30781626701355, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -674,7 +674,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 209.740045994520187, 583.974481701850891, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 119.740045994520187, 33.974481701850891, 15.0, 15.0 ],
+					"presentation_rect" : [ 99.740045994520187, 13.974481701850891, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -710,7 +710,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 164.740045100450516, 572.974481821060181, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 74.740045100450516, 22.974481821060181, 15.0, 15.0 ],
+					"presentation_rect" : [ 54.740045100450516, 2.974481821060181, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -746,7 +746,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 132.406711250543594, 587.307816028594971, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 42.406711250543594, 37.307816028594971, 15.0, 15.0 ],
+					"presentation_rect" : [ 22.406711250543594, 17.307816028594971, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -782,7 +782,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 110.740044385194778, 618.974484086036682, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.740044385194778, 68.974484086036682, 15.0, 15.0 ],
+					"presentation_rect" : [ 0.740044385194778, 48.974484086036682, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -830,7 +830,7 @@
 					"patching_rect" : [ 100.0, 560.0, 170.0, 161.762114537444916 ],
 					"pic" : "handshape.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 10.0, 170.0, 161.762114537444916 ]
+					"presentation_rect" : [ -10.0, -10.0, 170.0, 161.762114537444916 ]
 				}
 
 			}
@@ -1618,6 +1618,13 @@
 				"bootpath" : "~/Documents/Max 8/Snapshots",
 				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "handshape.png",
+				"bootpath" : "~/MEGA/Homebase/10 Projekte/dev/screamscape/max patches/screamscape/media",
+				"patcherrelativepath" : "../media",
+				"type" : "PNG",
 				"implicit" : 1
 			}
  ],

@@ -2,6 +2,296 @@
 	"pattrstorage" : 	{
 		"name" : "main",
 		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"name" : "Full Pass",
+				"data" : 				{
+					"cut_frequencies" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"sub-scale-factors" : [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ],
+					"master_strip::AudioOutput[1]::output" : [ 1.0 ],
+					"master_strip::AudioRecord[1]::file" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
+					"master_strip::mo.latch::rate" : [ 1 ],
+					"motion_input::mo.udpreceive::port" : [ "8000" ],
+					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::slider" : [ 0.501994705200195 ],
+					"motion_input::mo.hslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[3]::color" : [ 0 ],
+					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ -0.00858931210306 ],
+					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::color" : [ 0 ],
+					"motion_input::mo.hslider[1]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.000596187006255 ],
+					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::color" : [ 0 ],
+					"motion_input::mo.vslider[2]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[2]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ 0.173717414008246 ],
+					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::color" : [ 0 ],
+					"motion_input::mo.vslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.crosspatch::ins" : [ 4.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 5.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 4,
+								"numouts" : 5
+							}
+
+						}
+ ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"name" : "LowGain",
+				"data" : 				{
+					"cut_frequencies" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"sub-scale-factors" : [ 0.885509932847488, 0.841650283724681, 0.824106424075558, 0.850422213549242, 0.850422213549242, 0.508316950391347, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.02586081004047, 0.0, 0.0 ],
+					"master_strip::AudioOutput[1]::output" : [ 1.0 ],
+					"master_strip::AudioRecord[1]::file" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
+					"master_strip::mo.latch::rate" : [ 1 ],
+					"motion_input::mo.udpreceive::port" : [ "8000" ],
+					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::slider" : [ 0.502120378282335 ],
+					"motion_input::mo.hslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[3]::color" : [ 0 ],
+					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ -0.008528169658449 ],
+					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::color" : [ 0 ],
+					"motion_input::mo.hslider[1]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.000505627942336 ],
+					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::color" : [ 0 ],
+					"motion_input::mo.vslider[2]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[2]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ 0.173713599310981 ],
+					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::color" : [ 0 ],
+					"motion_input::mo.vslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.crosspatch::ins" : [ 4.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 5.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 4,
+								"numouts" : 5
+							}
+
+						}
+ ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"name" : "Var",
+				"data" : 				{
+					"cut_frequencies" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"sub-scale-factors" : [ 0.753930985479067, 0.824106424075558, 0.71007133635626, 0.701299406531698, 0.736387125829944, 0.701299406531698, 0.77147484512819, 0.797790634601874, 0.727615196005383, 0.657439757408891, 0.683755546882576, 0.666211687233453, 0.745159055654505, 0.77147484512819, 0.701299406531698, 0.745159055654505, 0.701299406531698, 0.745159055654505, 0.736387125829944, 0.727615196005383, 0.815334494250997, 0.894281862672049, 0.911825722321172, 0.885509932847488, 0.806562564426435 ],
+					"master_strip::AudioOutput[1]::output" : [ 1.0 ],
+					"master_strip::AudioRecord[1]::file" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
+					"master_strip::mo.latch::rate" : [ 1 ],
+					"motion_input::mo.udpreceive::port" : [ "8000" ],
+					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::slider" : [ 0.496268717447917 ],
+					"motion_input::mo.hslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[3]::color" : [ 0 ],
+					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ -0.006840922435125 ],
+					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::color" : [ 0 ],
+					"motion_input::mo.hslider[1]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.000467488000729 ],
+					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::color" : [ 0 ],
+					"motion_input::mo.vslider[2]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[2]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ 0.099348704020182 ],
+					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::color" : [ 0 ],
+					"motion_input::mo.vslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.crosspatch::ins" : [ 4.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 5.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 4,
+								"numouts" : 5
+							}
+
+						}
+ ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"name" : "LowFreqHiGain",
+				"data" : 				{
+					"cut_frequencies" : [ 1344.003151062228881, 2772.574579633657322, 1367.812674871752506, 0.0, 2558.288865347943101, 248.765055824133611, 0.0, 2320.193627252705028, 0.0, 0.0, 0.0, 1963.050770109847917, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 29.144432673971565, 58.28886534794313, 58.28886534794313, 0.0 ],
+					"sub-scale-factors" : [ 0.078492388987839, 0.122352038110646, 0.14866782758433, 0.161825722321172, 0.174983617058014, 0.212995312964447, 0.25100700887088, 0.289018704777312, 0.332878353900119, 0.376738003022926, 0.420597652145733, 0.44398946501123, 0.467381277876728, 0.490773090742225, 0.534632739865032, 0.604808178461523, 0.631123967935207, 0.639895897759769, 0.657439757408891, 0.639895897759769, 0.639895897759769, 0.683755546882576, 0.797790634601874, 0.832878353900119, 0.929369581970295 ],
+					"master_strip::AudioOutput[1]::output" : [ 1.0 ],
+					"master_strip::AudioRecord[1]::file" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
+					"master_strip::mo.latch::rate" : [ 1 ],
+					"motion_input::mo.udpreceive::port" : [ "8000" ],
+					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::slider" : [ 0.502159542507596 ],
+					"motion_input::mo.hslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[3]::color" : [ 0 ],
+					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ -0.008609753847122 ],
+					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::color" : [ 0 ],
+					"motion_input::mo.hslider[1]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.000580202966808 ],
+					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::color" : [ 0 ],
+					"motion_input::mo.vslider[2]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[2]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ 0.173255157470703 ],
+					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::color" : [ 0 ],
+					"motion_input::mo.vslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.crosspatch::ins" : [ 4.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 5.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 4,
+								"numouts" : 5
+							}
+
+						}
+ ]
+				}
+
+			}
+,
+			"5" : 			{
+				"id" : 5,
+				"name" : "LowFreqLowGain",
+				"data" : 				{
+					"cut_frequencies" : [ 1582.098389157466954, 1415.431722490800212, 344.003151062228824, 320.193627252705028, 272.574579633657379, 272.574579633657379, 1296.384103443181175, 1582.098389157466954, 1129.717436776514432, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"sub-scale-factors" : [ 0.069720459163277, 0.105782837330919, 0.14184521549856, 0.177907593666201, 0.213969971833843, 0.250032350001484, 0.286094728169125, 0.322157106336767, 0.358219484504408, 0.394281862672049, 0.411825722321172, 0.411825722321172, 0.438141511794856, 0.473229231093102, 0.578492388987839, 0.666211687233453, 0.674983617058014, 0.683755546882576, 0.701299406531698, 0.762702915303628, 0.789018704777312, 0.832878353900119, 0.867966073198365, 0.938141511794856, 0.938141511794856 ],
+					"master_strip::AudioOutput[1]::output" : [ 1.0 ],
+					"master_strip::AudioRecord[1]::file" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::gain" : [ 0.0 ],
+					"master_strip::AudioRecord[1]::rec" : [ 0.0 ],
+					"master_strip::mo.latch::rate" : [ 1 ],
+					"motion_input::mo.udpreceive::port" : [ "8000" ],
+					"motion_input::mo.udpreceive::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::slider" : [ 0.498572285970052 ],
+					"motion_input::mo.hslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[3]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[3]::color" : [ 0 ],
+					"motion_input::mo.hslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::slider" : [ -0.007460406753752 ],
+					"motion_input::mo.hslider[1]::mute" : [ 0.0 ],
+					"motion_input::mo.hslider[1]::polarity" : [ 1.0 ],
+					"motion_input::mo.hslider[1]::color" : [ 0 ],
+					"motion_input::mo.hslider[1]::length" : [ 2.0 ],
+					"motion_input::mo.hslider[1]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::slider" : [ 0.000377579797109 ],
+					"motion_input::mo.vslider[2]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[2]::color" : [ 0 ],
+					"motion_input::mo.vslider[2]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[2]::style" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::slider" : [ 0.150308397081163 ],
+					"motion_input::mo.vslider[3]::mute" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::polarity" : [ 0.0 ],
+					"motion_input::mo.vslider[3]::color" : [ 0 ],
+					"motion_input::mo.vslider[3]::length" : [ 2.0 ],
+					"motion_input::mo.vslider[3]::style" : [ 0.0 ],
+					"motion_input::mo.crosspatch::ins" : [ 4.0 ],
+					"motion_input::mo.crosspatch::outs" : [ 5.0 ],
+					"motion_input::mo.crosspatch::connect" : [ 0.0 ],
+					"motion_input::mo.crosspatch::mute" : [ 0.0 ],
+					"motion_input::mo.crosspatch::crosspatch" : [ 						{
+							"data" : 							{
+								"numins" : 4,
+								"numouts" : 5,
+								"connections" : [ 									{
+										"in" : 0,
+										"out" : 4,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 3,
+										"out" : 0,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 1,
+										"out" : 1,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 1,
+										"out" : 2,
+										"gain" : 1.0
+									}
+, 									{
+										"in" : 2,
+										"out" : 3,
+										"gain" : 1.0
+									}
+ ]
+							}
+
+						}
+ ]
+				}
+
+			}
 
 		}
 
