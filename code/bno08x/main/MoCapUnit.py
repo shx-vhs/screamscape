@@ -29,10 +29,6 @@ except Exception as e:
 #UDP_HOST = os.getenv("CIRCUITPY_HOST_IP")
 UDP_PORT = 8000
 
-ssid = "FRITZ!Box 7590 YP"
-password = "38677576027060286734"
-UDP_HOST = "192.168.178.28"
-
 
 print("Connecting to WiFi...")
 wifi.radio.connect(ssid, password)
