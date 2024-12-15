@@ -24,10 +24,14 @@ except Exception as e:
 
 """WiFi and OSC setup"""
 
-ssid = os.getenv("CIRCUITPY_WIFI_SSID")
-password = os.getenv("CIRCUITPY_WIFI_PASSWORD")
-UDP_HOST = os.getenv("CIRCUITPY_HOST_IP")
+#ssid = os.getenv("CIRCUITPY_WIFI_SSID")
+#password = os.getenv("CIRCUITPY_WIFI_PASSWORD")
+#UDP_HOST = os.getenv("CIRCUITPY_HOST_IP")
 UDP_PORT = 8000
+
+ssid = "FRITZ!Box 7590 YP"
+password = "38677576027060286734"
+UDP_HOST = "192.168.178.28"
 
 
 print("Connecting to WiFi...")
@@ -98,9 +102,11 @@ def get_voltage(pin):
 # Conversion to Euler angles with normalization to -1 to 1
 def quaternion_to_euler(i, j, k, real):
 
-    roll = math.atan2(2 * (real * i + j * k), 1 - 2 * (i**2 + k**2))
-    pitch = math.asin(2 * (real * k - i * j))
     yaw = math.atan2(2 * (real * j + i * k), 1 - 2 * (j**2 + k**2))
+    pitch = math.asin(2 * (real * k - i * j))
+    roll = math.atan2(2 * (real * i + j * k), 1 - 2 * (i**2 + k**2))
+
+
 
     # Normalize to -1 to 1 range
 
@@ -108,11 +114,11 @@ def quaternion_to_euler(i, j, k, real):
     #roll = roll / math.pi
     #yaw = yaw / math.pi
 
-    roll = math.degrees(roll)
-    pitch = math.degrees(pitch)
     yaw = math.degrees(yaw)
+    pitch = math.degrees(pitch)
+    roll = math.degrees(roll)
 
-    return pitch, roll, yaw
+    return yaw, pitch, roll
 
 
 # Quaternion multiplication function
@@ -134,7 +140,7 @@ def multiply_quaternions(q1, q2):
 """Main Loop"""
 
 while True:
-
+    iteration_start_time = time.monotonic()
     current_time = time.monotonic()
 
     # 400 Hz data (accelerometer, gyro, and quaternion)
@@ -150,7 +156,7 @@ while True:
             x, y, z, w = multiply_quaternions((quat_i, quat_j, quat_k, quat_real),
             reference_quaternion)
 
-            pitch, roll, yaw = quaternion_to_euler(x, y, z, w)
+            yaw, pitch, roll = quaternion_to_euler(x, y, z, w)
 
             battery = microosc.OscMsg("/bat",
             [battery_voltage], ("f",))
@@ -193,4 +199,9 @@ while True:
         if not first_update_done:
             print("Sending data...")
             first_update_done = True  # Set flag so message doesn't print again
+
+    iteration_end_time = time.monotonic()  # End timestamp for the iteration
+
+    # Print the time taken for the current iteration
+    print(f"Iteration execution time: {iteration_end_time - iteration_start_time:.6f} seconds")
 

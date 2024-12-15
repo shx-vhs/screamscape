@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1566.0, 451.0, 1532.0, 779.0 ],
+		"rect" : [ 34.0, 153.0, 1216.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -119,8 +119,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 960.0, 260.0, 150.0, 20.0 ],
-					"text" : "Programming"
+					"patching_rect" : [ 860.0, 260.0, 150.0, 20.0 ],
+					"text" : "Prototyping"
 				}
 
 			}
@@ -130,7 +130,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 860.0, 260.0, 150.0, 20.0 ],
+					"patching_rect" : [ 960.0, 260.0, 150.0, 20.0 ],
 					"text" : "Performance"
 				}
 
@@ -150,26 +150,26 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-47",
-					"linecount" : 6,
+					"linecount" : 7,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 960.0, 280.0, 97.0, 89.0 ],
-					"text" : ";\rdsp iovs 128;\rdsp sigvs 32;\rmax overdrive 1;\rdsp takeover 1;\rdsp optimize 1"
+					"patching_rect" : [ 960.0, 280.0, 97.0, 102.0 ],
+					"text" : ";\rdsp sr 44100;\rdsp iovs 256;\rdsp sigvs 32;\rmax overdrive 1;\rdsp takeover 1;\rdsp optimize 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-46",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 860.0, 280.0, 97.0, 76.0 ],
-					"text" : ";\rdsp iovs 256;\rdsp sigvs 64;\rmax overdrive 0;\rdsp takeover 0"
+					"patching_rect" : [ 860.0, 280.0, 97.0, 89.0 ],
+					"text" : ";\rdsp sr 44100;\rdsp iovs 512;\rdsp sigvs 64;\rmax overdrive 0;\rdsp takeover 0"
 				}
 
 			}
